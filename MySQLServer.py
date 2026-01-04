@@ -1,5 +1,4 @@
 import mysql.connector
-from mysql.connector import Error
 
 try:
     # CONNECT TO MYSQL SERVER
@@ -17,7 +16,7 @@ try:
 
         print("Database 'alx_book_store' created successfully!")
 
-except Error as e:
+except mysql.connector.Error as e:
     print(f"Error while connecting to MySQL: {e}")
 
 finally:
